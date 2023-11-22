@@ -1,4 +1,4 @@
-<!-- <div class="container" id="container">
+<div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="#">
                 <h1>Tạo tài khoản</h1>
@@ -56,4 +56,4 @@
     signInButton.addEventListener('click', () => {
         container.classList.remove('right-panel-active');
     });
-</script> -->
+</script>
