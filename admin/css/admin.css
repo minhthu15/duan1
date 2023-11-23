@@ -1,0 +1,77 @@
+.header_admin{
+    background-color:#000;
+    border:1px #CCC solid;
+    color:yellow;
+    border-radius:5px;
+    padding:10px 20px;
+    
+}
+.header_admin h1{
+font-size:2vv;
+}
+.font_title{
+    background-color:#000;
+    border:1px #CCC solid;
+    color:yellow;
+    border-radius:5px;
+    padding:10px 20px;
+}
+.mr20{
+   margin-top:20px;
+   border: 1px  yellow solid;
+   background-color: #000;
+   color: white;
+   border-radius: 3px;
+   padding: 10px;
+}
+ label{
+   display:flex;
+   justify-content:start;
+    font-size:20px;
+    color:red;
+    margin-top:5px;
+}
+.formds_loai table{
+    width:100%;
+    border-collapse:collapse;
+     background-color:#000;
+     color: yellow;
+        padding:20px;
+}
+.formds_loai table td {
+    padding:10px 20px;
+    border:1px yellow solid;
+    padding:30px;
+}
+.box_footer{
+    margin-top:300px;
+}
+.menu{
+    background:black;
+    border:1px solid #000;
+    padding:5px;
+    height:33px;
+
+}
+.menu ul{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  }
+.menu ul li{
+  list-style:none;
+}
+.menu li a{
+  color:white;
+  text-decoration:none;
+}
+.menu li a:hover,.dropdown:hover .dropbtn{
+ color: yellow;
+ padding:13px 0;
+}
+input{
+  border: 2px solid yellow;
+  background-color: #000;
+  color: white;
+  border-radius: 3px;
+}
