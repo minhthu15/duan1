@@ -9,7 +9,7 @@ function delete_sanpham($id){
     pdo_query($sql);
 }
 function loadall_sanpham_top10(){
-    $sql="select * from truyen where 1 order by luotxem desc limit 0,10";
+    $sql="select * from truyen where 1 order by view desc limit 0,10";
     $listsanpham = pdo_query($sql);
     return $listsanpham;    
 }

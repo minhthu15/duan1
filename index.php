@@ -13,6 +13,7 @@ if (isset($_SESSION['mycart']))
 
 $spnew = loadall_sanpham_home();
 $dsdm = loadall_the_loai();
+$dsbanchay = loadall_sanpham_top10();
 
 
 include "./view/header.php";
@@ -37,6 +38,19 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $tendm = load_ten_dm($iddm);
             include "view/sanpham.php";
             break;
+            
+            case 'chitiettruyen':
+                if (isset($_GET['idsp'])&&($_GET['idsp']>0)) {
+                    $id = $_GET['idsp'];
+                    $onesp=loadone_sanpham($id);
+                    include "view/chitiettruyen.php";
+                }else{
+                    include "view/home.php";
+    
+                }
+                break;
+
+
 
         case 'dangky':
             $email = $_POST['email'];
