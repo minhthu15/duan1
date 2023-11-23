@@ -5,6 +5,7 @@ session_start();
 include "./model/the_loai.php";
 include "./model/pdo.php";
 include "./model/truyen.php";
+include "./model/taikhoan.php";
 include "global.php";
 
 if (isset($_SESSION['mycart']))
@@ -47,6 +48,16 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             }
             include "./view/taikhoan/dangky.php";
             break;
+        
+            case 'dangnhap':
+                if ((isset($_POST['dangnhap'])) && ($_POST['dangnhap'])) {
+                    $user = $_POST['user'];
+                    $pass = $_POST['pass'];
+                    $checkuser = check_user($user, $pass);
+                    $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập tài khoản";
+                }
+                include "./view/taikhoan/dangnhap.php";
+                break;
 
         case 'addtocart':
             if ((isset($_POST['addtocart'])) && ($_POST['addtocart'])) {

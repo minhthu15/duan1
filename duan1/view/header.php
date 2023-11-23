@@ -55,7 +55,7 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="account-area text-end">
                             <ul>
-                                <li><a href="">Đăng nhập</a></li>
+                                <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
                                 <li><a href="index.php?act=dangky">Đăng ký</a></li>
                             </ul>
                         </div>
