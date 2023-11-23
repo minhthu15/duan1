@@ -84,7 +84,7 @@
                     <div class="col-lg-3 col-md-3 col-12">
                         <div class="my-cart">
                             <ul>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i>Giỏ hàng của tôi</a>
+                                <li><a href="index.php?act=addtocart"><i class="fa fa-shopping-cart"></i>Giỏ hàng của tôi</a>
                                     <span>2</span>
                                     <div class="mini-cart-sub">
                                         <div class="cart-product">

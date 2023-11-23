@@ -102,7 +102,7 @@
                         <div class="buttons-cart mb-30">
                             <ul>
                                 <li><a href="#">Cập nhật giỏ hàng</a></li>
-                                <li><a href="#">Tiếp tục mua sắm</a></li>
+                                <li><a href="index.php">Tiếp tục mua sắm</a></li>
                             </ul>
                         </div>
                         <div class="coupon">

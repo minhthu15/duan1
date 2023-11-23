@@ -159,13 +159,13 @@
                             </div>
                             <div class="product-link">
                                 <div class="product-button">
-                                <form action="index.php?act=addtocart" method="post">
-                                <input type="hidden" name="id" value="' . $id . '">
-                                <input type="hidden" name="name" value="' . $name . '">
-                                <input type="hidden" name="img" value="' . $img . '">
-                                <input type="hidden" name="price" value="' . $price . '">
-                                <button><a href="#" title="Add to cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a></button>
-                                </form>
+                                    <form action="index.php?act=addtocart" method="post">
+                                        <input type="hidden" name="id" value="' . $id . '">
+                                        <input type="hidden" name="name" value="' . $name . '">
+                                        <input type="hidden" name="img" value="' . $img . '">
+                                        <input type="hidden" name="price" value="' . $price . '">
+                                        <button type="submit"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
+                                    </form>
                                 </div>
                                 <div class="add-to-link">
                                     <ul>
@@ -277,7 +277,7 @@
                                 <input type="hidden" name="name" value="' . $name . '">
                                 <input type="hidden" name="img" value="' . $img . '">
                                 <input type="hidden" name="price" value="' . $price . '">
-                                <button><a href="#" title="Add to cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a></button>
+                                <button type="submit"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
                                 </form>
                                 </div>
                                 <div class="add-to-link">
@@ -386,12 +386,12 @@
                             <div class="product-link">
                                 <div class="product-button">
                                 <form action="index.php?act=addtocart" method="post">
-                                <input type="hidden" name="id" value="' . $id . '">
-                                <input type="hidden" name="name" value="' . $name . '">
-                                <input type="hidden" name="img" value="' . $img . '">
-                                <input type="hidden" name="price" value="' . $price . '">
-                                <button><a href="#" title="Add to cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a></button>
-                                </form>
+                                        <input type="hidden" name="id" value="' . $id . '">
+                                        <input type="hidden" name="name" value="' . $name . '">
+                                        <input type="hidden" name="img" value="' . $img . '">
+                                        <input type="hidden" name="price" value="' . $price . '">
+                                        <button type="submit"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
+                                    </form>
                                 </div>
                                 <div class="add-to-link">
                                     <ul>
@@ -525,12 +525,12 @@
                             <div class="product-link">
                                 <div class="product-button">
                                 <form action="index.php?act=addtocart" method="post">
-                                <input type="hidden" name="id" value="' . $id . '">
-                                <input type="hidden" name="name" value="' . $name . '">
-                                <input type="hidden" name="img" value="' . $img . '">
-                                <input type="hidden" name="price" value="' . $price . '">
-                                <button><a href="#" title="Add to cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a></button>
-                                </form>
+                                        <input type="hidden" name="id" value="' . $id . '">
+                                        <input type="hidden" name="name" value="' . $name . '">
+                                        <input type="hidden" name="img" value="' . $img . '">
+                                        <input type="hidden" name="price" value="' . $price . '">
+                                        <button type="submit"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
+                                    </form>
                                 </div>
                                 <div class="add-to-link">
                                     <ul>
