@@ -10,6 +10,7 @@ if (isset($_SESSION['mycart']))
 
 $spnew = loadall_sanpham_home();
 $dsdm = loadall_the_loai();
+$dsbanchay = loadall_sanpham_top10();
 include "./view/header.php";
 
 

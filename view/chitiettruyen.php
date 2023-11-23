@@ -5,8 +5,8 @@
 			<div class="col-lg-12">
 				<div class="breadcrumbs-menu">
 					<ul>
-						<li><a href="#">Trang chủ</a></li>
-						<li><a href="#" class="active">Chi tiết truyện</a></li>
+						<li><a href="index.php">Trang chủ</a></li>
+						<li><a href="#" class="active">Chi tiết sách</a></li>
 					</ul>
 				</div>
 			</div>
@@ -231,14 +231,25 @@
 				<!-- new-book-area-start -->
 				<div class="new-book-area mt-60">
 					<div class="section-title text-center mb-30">
-						<h3>SẢN PHẨM CÙNG MUA</h3>
+						<h3>SÁCH CÙNG MUA</h3>
 					</div>
 					<div class="tab-active-2 owl-carousel">
-						<!-- single-product-start -->
-						<div class="product-wrapper">
+					<?php
+                    $i = 0;
+                    foreach ($spnew as $sp) {
+                        extract($sp);
+                        $linksp = "index.php?act=chitiettruyen&idsp=" . $id;
+                        $hinh = $img_path . $img;
+                        if (($i == 2) || ($i == 5) || ($i == 8)) {
+                            $mr = "";
+                        } else {
+                            $mr = "mr";
+                        }
+					
+					echo	'<div class="product-wrapper '.$mr.'">
 							<div class="product-img">
-								<a href="#">
-									<img src="img/product/1.jpg" alt="book" class="primary" />
+								<a href="'.$linksp.'">
+									<img src="'.$hinh.'" alt="book" class="primary" />
 								</a>
 								<div class="quick-view">
 									<a class="action-view" href="#" data-bs-target="#productModal" data-bs-toggle="modal" title="Quick View">
@@ -262,10 +273,10 @@
 										<li><a href="#"><i class="fa fa-star"></i></a></li>
 									</ul>
 								</div>
-								<h4><a href="#">Joust Duffle Bag</a></h4>
+								<h4><a href="'.$linksp.'">'.$name.'</a></h4>
 								<div class="product-price">
 									<ul>
-										<li>$60.00</li>
+										<li>'.$price.'</li>
 									</ul>
 								</div>
 							</div>
@@ -279,8 +290,11 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</div>';
+					}
+				?>
 						<!-- single-product-end -->
+
 
 						<!-- single-product-start -->
 						<div class="product-wrapper">
@@ -372,6 +386,7 @@
 									</ul>
 								</div>
 							</div>
+					?>
 						</div>
 						<!-- single-product-end -->
 						<!-- single-product-start -->
@@ -435,9 +450,16 @@
 					<div class="random-area mb-30">
 						<div class="product-active-2 owl-carousel">
 							<div class="product-total-2">
-								<div class="single-most-product bd mb-18">
+							<?php
+							 foreach ($spnew as $sp) {
+								extract($sp);
+								$linksp = "index.php?act=chitiettruyen&idsp=" . $id;
+								$hinh = $img_path . $img;
+							
+
+							echo'<div class="single-most-product bd mb-18">
 									<div class="most-product-img">
-										<a href="#"><img src="img/product/20.jpg" alt="book" /></a>
+										<a href="'.$linksp.'"><img src="'.$hinh.'" alt="book" /></a>
 									</div>
 									<div class="most-product-content">
 										<div class="product-rating">
@@ -449,149 +471,20 @@
 												<li><a href="#"><i class="fa fa-star"></i></a></li>
 											</ul>
 										</div>
-										<h4><a href="#">Endeavor Daytrip</a></h4>
+										<h4><a href="'.$linksp.'">'.$name.'</a></h4>
 										<div class="product-price">
 											<ul>
-												<li>$30.00</li>
-												<li class="old-price">$33.00</li>
+												<li>'.$price.'</li>
+												<li class="old-price">'.$price.'</li>
 											</ul>
 										</div>
 									</div>
-								</div>
-								<div class="single-most-product bd mb-18">
-									<div class="most-product-img">
-										<a href="#"><img src="img/product/21.jpg" alt="book" /></a>
-									</div>
-									<div class="most-product-content">
-										<div class="product-rating">
-											<ul>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-											</ul>
-										</div>
-										<h4><a href="#">Savvy Shoulder Tote</a></h4>
-										<div class="product-price">
-											<ul>
-												<li>$30.00</li>
-												<li class="old-price">$35.00</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="single-most-product">
-									<div class="most-product-img">
-										<a href="#"><img src="img/product/22.jpg" alt="book" /></a>
-									</div>
-									<div class="most-product-content">
-										<div class="product-rating">
-											<ul>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-											</ul>
-										</div>
-										<h4><a href="#">Compete Track Tote</a></h4>
-										<div class="product-price">
-											<ul>
-												<li>$35.00</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="product-total-2">
-								<div class="single-most-product bd mb-18">
-									<div class="most-product-img">
-										<a href="#"><img src="img/product/23.jpg" alt="book" /></a>
-									</div>
-									<div class="most-product-content">
-										<div class="product-rating">
-											<ul>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-											</ul>
-										</div>
-										<h4><a href="#">Voyage Yoga Bag</a></h4>
-										<div class="product-price">
-											<ul>
-												<li>$30.00</li>
-												<li class="old-price">$33.00</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="single-most-product bd mb-18">
-									<div class="most-product-img">
-										<a href="#"><img src="img/product/24.jpg" alt="book" /></a>
-									</div>
-									<div class="most-product-content">
-										<div class="product-rating">
-											<ul>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-											</ul>
-										</div>
-										<h4><a href="#">Impulse Duffle</a></h4>
-										<div class="product-price">
-											<ul>
-												<li>$70.00</li>
-												<li class="old-price">$74.00</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="single-most-product">
-									<div class="most-product-img">
-										<a href="#"><img src="img/product/22.jpg" alt="book" /></a>
-									</div>
-									<div class="most-product-content">
-										<div class="product-rating">
-											<ul>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"></i></a></li>
-											</ul>
-										</div>
-										<h4><a href="#">Fusion Backpack</a></h4>
-										<div class="product-price">
-											<ul>
-												<li>$59.00</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+								</div>';
+							 }
+								?>	
 							</div>
 						</div>
 					</div>
-
-					<!-- <div class="banner-area mb-30">
-						<div class="banner-img-2">
-							<a href="#"><img src="img/banner/33.jpg" alt="banner" /></a>
-						</div>
-					</div>
-
-					<div class="left-title-2 mb-30">
-						<h2>Compare Products</h2>
-						<p>You have no items to compare.</p>
-					</div>
-					<div class="left-title-2">
-						<h2>My Wish List</h2>
-						<p>You have no items in your wish list.</p>
-					</div> -->
-
 				</div>
 			</div>
 		</div>
