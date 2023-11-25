@@ -52,30 +52,68 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
 
 
-        case 'dangky':
-            $email = $_POST['email'];
-            $user = $_POST['user'];
-            $pass = $_POST['pass'];
-            if (isset($email) && isset($user) && isset($pass)) {
-                insert_taikhoan($email, $user, $pass);
-                $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập tài khoản";
-            }
+                case 'dangky':
+                    if ((isset($_POST['dangky'])) && ($_POST['dangky'])) {
+                        $email = $_POST['email'];
+                        $user = $_POST['user'];
+                        $pass = $_POST['pass'];
+                        insert_taikhoan($email, $user, $pass);
+                        $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập tài khoản";
+                    }
+                    include "./view/taikhoan/dangky.php";
+                    break;
 
-            include "./view/taikhoan/dangky.php";
-            break;
+                    case 'dangnhap':
+                        if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                            $user = $_POST['user'];
+                            $pass = $_POST['pass'];
+                            $checkuser = checkuser($user, $pass);
+                            if (is_array($checkuser)){
+                                $_SESSION['user']=$checkuser;
+                                header('Location:index.php');
+                            }else{
+                               $thongbao='Tài khoản không tồn tại.Vui lòng kiểm tra lại đăng ký';
+                            }
+                          
+                        }
+                      include "./view/taikhoan/dangnhap.php";
+                        break;
 
-        case 'dangnhap':
-            if ((isset($_POST['dangnhap'])) && ($_POST['dangnhap'])) {
-                $user = $_POST['user'];
-                $pass = $_POST['pass'];
-                $checkuser = check_user($user, $pass);
-                $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập tài khoản";
-            }
-            include "./view/taikhoan/dangnhap.php";
-            break;
+                        
+                case 'edit_taikhoan':
+                    if(isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                        $user = $_POST['user'];
+                        $pass = $_POST['pass'];
+                        $email = $_POST['email'];
+                        $address = $_POST['address'];
+                        $tel = $_POST['tel'];
+                        $id= $_POST['id'];
 
+                        update_taikhoan($id, $user,$pass, $email, $address, $tel);
+                        $_SESSION['user']= checkuser($user, $pass);
+                            // header('Location:index.php?act=edit_taikhoan');
+                    }
+                    include "./view/taikhoan/edit_taikhoan.php";
+                    break;
+                    
+                    case 'quenmk':
+                        if(isset($_POST['guiemail']) && ($_POST['guiemail'])) {
+                            $email = $_POST['email'];
+                            $checkemail=check_email($email);
+                            if (is_array($checkemail)) {
+                               $thongbao = "Mật khẩu của bạn là :".$checkemail['pass'];
+                            }else{
+                                $thongbao="Email này không tồn tại";
+                            }
+                        }
+                        include "./view/taikhoan/quenmk.php";
+                        break;
+                        case'thoat':
+                            session_unset();
+                            exit(header("Location: /index.php"));
+                            break;
+        
         case 'addtocart':
-
             $id = $_POST['id'];
             $name = $_POST['name'];
             $img = $_POST['img'];

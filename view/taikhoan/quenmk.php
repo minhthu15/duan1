@@ -20,40 +20,33 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="login-title text-center mb-30">
-							<h2>Đăng ký</h2>
+							<h2>Quên mật khẩu</h2>
 						</div>
 					</div>
 					<div class="offset-lg-3 col-lg-6 col-md-12 col-12">
 						<div class="login-form">
-                            <form action="index.php?act=dangky" method="post">
+                            <form action="index.php?act=quenmk" method="post">
 							<div class="single-login">
 								<label>Email<span>*</span></label>
 								<input type="email" name="email">
 							</div>
-							<div class="single-login">
-								<label>Tên đăng nhập<span>*</span></label>
-								<input type="text" name="user">
-							</div>
-							<div class="single-login">
-								<label>Mật khẩu <span>*</span></label>
-								<input type="password" name="pass">
-							</div>
 							<div class="single-login single-login-2">
-								<input type="submit" value="Đăng ký" name="dangky"><br><br>
+								<input type="submit" value="Quên mật khẩu" name="guiemail"><br><br>
 								<input type="reset" value="Nhập lại">
 							</div>
 
 						</div>
 					</div>
                     </form>
-					<?php
-            
-					if(isset($thongbao)&&($thongbao!="")){
-						echo $thongbao;
-					}
-                  
-					?>
+
 				</div>
 			</div>
 		</div>
+        <?php
+            
+            if(isset($thongbao)&&($thongbao!="")){
+                echo $thongbao;
+            }
+          
+            ?>
 		<!-- user-login-area-end -->
