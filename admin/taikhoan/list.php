@@ -3,7 +3,7 @@
         <h1>DANH SÁCH TÀI KHOẢN</h1>
     </div>
     <div class="row2 form_content ">
-        <form action="#" method="POST">
+        <form action="index.php?act=listk" method="POST">
             <div class="row2 mb10 formds_loai">
                 <table>
                     <tr>
@@ -45,7 +45,6 @@
             <div class="row mb10 ">
                 <input class="mr20" type="button" value="CHỌN TẤT CẢ">
                 <input class="mr20" type="button" value="BỎ CHỌN TẤT CẢ">
-                <a href="index.php?act=addkh"> <input class="mr20" type="button" value="NHẬP THÊM"></a>
             </div>
         </form>
     </div>
