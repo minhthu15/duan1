@@ -16,28 +16,23 @@ $dsdm = loadall_the_loai();
 $dsbanchay = loadall_sanpham_top10();
 
 
-
-
-
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
-        case 'sanpham':
-            if ((isset($_POST['kyw'])) && ($_POST['kyw'] != "")) {
-                $kyw = $_POST['kyw'];
-            } else {
-                $kyw = "";
-            }
-            if ((isset($_GET['iddm'])) && ($_GET['iddm'] > 0)) {
-                $iddm = $_GET['iddm'];
 
-            } else {
-                $iddm = 0;
+        
+        case 'truyen':
+            if (isset($_GET['iddm'])&&($_GET['iddm']>0)) {
+                $iddm = $_GET['iddm'];
+                $dssp =loadall_sanpham("",$iddm);
+                $tentl = load_ten_tl($iddm);
+                include "view/truyen.php";
+            }else{
+                include "view/home.php";
+
             }
-            $dssp = loadall_sanpham($kyw, $iddm);
-            $tendm = load_ten_dm($iddm);
-            include "view/sanpham.php";
             break;
+
             
             case 'chitiettruyen':
                 if (isset($_GET['idsp'])&&($_GET['idsp']>0)) {

@@ -31,11 +31,11 @@ function loadall_sanpham($kyw, $iddm=0){
     return $listsanpham;    
 }
 
-function load_ten_dm($iddm){
+function load_ten_tl($iddm){
     if ($iddm > 0) {
-        $sql = "select * from danhmuc where id=". $iddm;
-        $dm = pdo_query_one($sql);
-        extract($dm);
+        $sql = "select * from theloai where id=". $iddm;
+        $tl = pdo_query_one($sql);
+        extract($tl);
         return $name;
     }else{
         return "";

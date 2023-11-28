@@ -155,7 +155,7 @@
                                             <?php
                                             foreach ($dsdm as $theloai) {
                                                 extract($theloai);
-                                                $linkdm = "index.php?act=sanpham&iddm=".$id;
+                                                $linkdm = "index.php?act=truyen&iddm=".$id;
                                                 echo '<span>
                                                 <a href="'.$linkdm.'" class="title">'.$name.'</a>
                                             </span>';
