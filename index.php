@@ -1,10 +1,12 @@
 <?php
 session_start();
-include "./model/the_loai.php";
+ob_start(); 
 include "./model/pdo.php";
+include "./model/the_loai.php";
 include "./model/truyen.php";
 include "./model/taikhoan.php";
 include "global.php";
+include "./view/header.php";
 
 if (isset($_SESSION['mycart']))
     $_SESSION['mycart'] = [];
@@ -12,7 +14,7 @@ if (isset($_SESSION['mycart']))
 $spnew = loadall_sanpham_home();
 $dsdm = loadall_the_loai();
 $dsbanchay = loadall_sanpham_top10();
-include "./view/header.php";
+
 
 
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
@@ -64,7 +66,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                     $checkuser = checkuser($user, $pass);
                     if (is_array($checkuser)){
                         $_SESSION['user']=$checkuser;
-                        header('Location:index.php');
+                        header('location: index.php');
                     }else{
                        $thongbao='Tài khoản không tồn tại.Vui lòng kiểm tra lại đăng ký';
                     }
@@ -84,7 +86,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
                         update_taikhoan($id, $user,$pass, $email, $address, $tel);
                         $_SESSION['user']= checkuser($user, $pass);
-                            // header('Location:index.php?act=edit_taikhoan');
+                            header('Location:index.php?act=edit_taikhoan');
+                         
                     }
                     include "./view/taikhoan/edit_taikhoan.php";
                     break;
@@ -103,7 +106,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                     break;
                     case'thoat':
                         session_unset();
-                        exit(header("Location: /index.php"));
+                        header('location: index.php');
                         break;
 
 
@@ -139,4 +142,5 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     include "./view/home.php";
 }
 include "./view/footer.php";
+ob_end_flush();
 ?>
