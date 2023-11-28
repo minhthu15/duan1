@@ -1,8 +1,8 @@
-
+<?php
+    $dsdm = loadall_the_loai();
+?>
 <!doctype html>
 <html class="no-js" lang="en">
-
-
 <!-- Mirrored from htmldemo.net/koparion/koparion/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Nov 2023 12:28:37 GMT -->
 <head>
     <meta charset="utf-8">
