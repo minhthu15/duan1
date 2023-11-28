@@ -2,6 +2,7 @@
 include "../model/pdo.php";
 include "../model/the_loai.php";
 include "../model/truyen.php";
+include "../model/taikhoan.php";
 include "header.php";
 
 
@@ -130,26 +131,11 @@ if (isset($_GET['act'])) {
             include "truyen/list.php";
             break;
 
-        // CONTROLLER QUẢN LÝ KHÁCH HÀNG ======================================================================
-        case 'dskh':
+        // CONTROLLER QUẢN LÝ TÀI KHOẢN //
+        case 'dstk':
             $listtaikhoan = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
-
-            case 'addkh':
-                // người dùng có click vào nút add hay ko
-                if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                    $tenkh = $_POST['user'];
-                    $email = $_POST['email'];
-                    $matkhau= $_POST['pass'];
-                    $diachi = $_POST['address'];
-                    $dienthoai = $_POST['tel'];
-                    insert_taikhoan($email, $tenkh, $matkhau,);
-                    $thongbao = "Thêm thành công";
-                }
-                include "taikhoan/add.php";
-                break;
-
         case 'xoatk':
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 delete_taikhoan($_GET['id']);
@@ -158,24 +144,7 @@ if (isset($_GET['act'])) {
             include "taikhoan/list.php";
             break;
 
-            case 'suatk':
-                if (isset($_GET['id']) && $_GET['id'] > 0) {
-                    $taikhoan = loadall_taikhoan();
-                }
-                $listtaikhoan = loadall_taikhoan();
-                include "taikhoan/update.php";
-                break;
 
-                case 'updatetk':
-                    if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                        $tenkh = $_POST['tenkh'];
-                        $id = $_POST['id'];
-                        update_taikhoan($id, $user,$pass, $email, $address, $tel);
-                        $thongbao = "Cập nhật thành công";
-                    }
-                    $listtaikhoan = loadall_taikhoan();
-                    include "taikhoan/list.php";
-                    break;
         // // CONTROLLER BÌNH LUẬN =================================================
         // case 'dsbl':
         //     $listbinhluan = loadall_binhluan(0);

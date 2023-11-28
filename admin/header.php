@@ -23,11 +23,11 @@
 
             <div class="row mb menu">
                 <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="">Trang chủ</a></li>
                     <li><a href="index.php?act=addtl">Thể loại</a></li>
                     <li><a href="index.php?act=addsp">Truyện</a></li>
                     <li><a href="">Bình luận</a></li>
-                    <li><a href="">Khách hàng</a></li>
+                    <li><a href="index.php?act=dstk">Tài Khoản</a></li>
                     <li><a href="">Thống kê</a></li>
                 </ul>
             </div>
