@@ -25,22 +25,28 @@
 	 			</div>
 	 			<div class="offset-lg-3 col-lg-6 col-md-12 col-12">
 	 				<div class="login-form">
-					 <?php
+	 					<?php
 							if (isset($_SESSION['user'])) {
 								extract($_SESSION['user'])
-								
+
 							?>
 	 						<div class="single-login">
 	 							<label>Xin chào <span>*</span></label>
 	 						</div>
-
-							
 	 						<div class="single-login">
 	 							<a href="index.php?act=quenmk">Quên mật khẩu</a>
 	 						</div>
+							
 	 						<div class="single-login">
 	 							<a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
 	 						</div>
+						
+							<?php if($role = 1){?>
+	 						<div class="single-login">
+	 							<a href="admin/index.php">Đăng Nhập Admin</a>
+	 						</div>
+							<?php }?>
+							
 	 						<div class="single-login">
 	 							<a href="index.php?act=thoat">Thoát</a>
 	 						</div>
@@ -64,16 +70,16 @@
 	 							</div>
 	 							<a href="index.php?act=quenmk">Quên mật khẩu</a>
 	 				</div>
-				</div>
 	 			</div>
-	 			</form>
-				 <?php } ?>
-				 <?php
-					if (isset($thongbao) && ($thongbao != "")) {
-						echo $thongbao;
-					}
-					?>
 	 		</div>
+	 		</form>
+	 	<?php } ?>
+	 	<?php
+			if (isset($thongbao) && ($thongbao != "")) {
+				echo $thongbao;
+			}
+			?>
 	 	</div>
+	 </div>
 	 </div>
 	 <!-- user-login-area-end -->

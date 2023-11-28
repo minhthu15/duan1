@@ -19,7 +19,7 @@
         return $sp;
     }
     function update_taikhoan($id, $user,$pass, $email, $address, $tel){
-        $sql = "update taikhoan set name='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."' where id=".$id;
+        $sql = "UPDATE taikhoan set name='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."' where id=".$id;
         pdo_execute($sql);
     }
     function delete_taikhoan($id){

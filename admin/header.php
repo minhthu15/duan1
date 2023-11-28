@@ -25,8 +25,8 @@
                 <ul>
                     <li><a href="index.php?act=addtl">Thể loại</a></li>
                     <li><a href="index.php?act=addsp">Truyện</a></li>
-                    <li><a href="">Bình luận</a></li>
-                    <li><a href="index.php?act=listtk">Tài khoản</a></li>
+                    <li><a href="index.php?act=dsbl">Bình luận</a></li>
+                    <li><a href="index.php?act=dstk">Tài khoản</a></li>
                     <li><a href="">Thống kê</a></li>
                 </ul>
             </div>
