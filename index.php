@@ -32,8 +32,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
             }
             break;
-
-            
+  
             case 'chitiettruyen':
                 if (isset($_GET['idsp'])&&($_GET['idsp']>0)) {
                     $id = $_GET['idsp'];
@@ -41,11 +40,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                     include "view/chitiettruyen.php";
                 }else{
                     include "view/home.php";
-    
                 }
                 break;
-
-
 
                 case 'dangky':
                     if ((isset($_POST['dangky'])) && ($_POST['dangky'])) {
@@ -74,7 +70,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                       include "./view/taikhoan/dangnhap.php";
                         break;
 
-                        
                 case 'edit_taikhoan':
                     if(isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                         $user = $_POST['user'];
@@ -109,14 +104,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                             break;
         
         case 'addtocart':
-            $id = $_POST['id'];
-            $name = $_POST['name'];
-            $img = $_POST['img'];
-            $price = $_POST['price'];
-            $soluong = 1;
-            $ttien = $soluong * $price;
-            $spadd = [$id, $name, $img, $price, $soluong, $ttien];
-            array_push($_SESSION['mycart'], $spadd);
+            // $id = $_POST['id'];
+            // $name = $_POST['name'];
+            // $img = $_POST['img'];
+            // $price = $_POST['price'];
+            // $soluong = 1;
+            // $ttien = $soluong * $price;
+            // $spadd = [$id, $name, $img, $price, $soluong, $ttien];
+            // array_push($_SESSION['mycart'], $spadd);
             include "./view/cart/viewcart.php";
             break;
 
@@ -132,6 +127,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             # code...
             break;
     }
+    
 } else {
     include "./view/home.php";
 }
